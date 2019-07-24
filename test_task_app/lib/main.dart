@@ -42,13 +42,22 @@ class _MainScreenState extends State<MainScreen> {
           onTap: () {
             _handleTap();
           },
-          child:
-          Container(
-            color: newColor,
-            margin: new EdgeInsets.all(0.0),
-            child: Center(child:CenterButton()),
-          ),
-        )
+          child: Center(
+            child: Container(
+              color: newColor,
+              margin: new EdgeInsets.all(0.0),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text("Hey there ;)"),
+                    CenterButton(),
+                  ],
+                ),
+              ),
+            ),
+          )
+        ),
     );
   }
 }
